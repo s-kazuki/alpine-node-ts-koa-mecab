@@ -4,8 +4,16 @@
   "description": "mecab api on node",
   "main": "index.js",
   "scripts": {
-    "start": "mongo-express",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc",
+    "build:watch": "rm -rf dist && tsc -w",
+    "clean": "rm -rf node_modules coverage dist .nyc_output",
+    "coverage": "nyc --exclude dist/test --reporter=html npm run test:all",
+    "lint": "tslint 'src/**/*.ts' 'test/**/*.test.ts'",
+    "start": "pm2 start dist/index.js --name koa",
+    "start:dev": "tsc-watch --onSuccess 'node --inspect=0.0.0.0:5858 dist/index.js'",
+    "test": "npm run build && mocha --exit --recursive dist/test/unit",
+    "test:integration": "npm run build && mocha --exit --recursive dist/test/integration",
+    "test:all": "npm run build && mocha --exit --recursive dist/test"
   },
   "author": "S-Kazuki<contact@revoneo.com>",
   "license": "ISC",
