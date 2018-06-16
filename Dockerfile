@@ -57,6 +57,7 @@ RUN apk add --update --no-cache build-base \
 && TZ=${TZ:-Asia/Tokyo} \
 && cp /usr/share/zoneinfo/$TZ /etc/localtime \
 && echo $TZ> /etc/timezone \
+&& apk del tzdata .mecab-build-deps \
 && rm -rf /var/cache/apk/*
 
 CMD ["npm", "start"]
