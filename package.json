@@ -1,0 +1,39 @@
+{
+  "name": "node-mecab-api",
+  "version": "1.0.0",
+  "description": "mecab api on node",
+  "main": "index.js",
+  "scripts": {
+    "start": "mongo-express",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "S-Kazuki<contact@revoneo.com>",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "mecab-async": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/mocha": "^5.2.1",
+    "@types/node": "^10.3.2",
+    "@types/sinon": "^5.0.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "mocha-sinon": "^2.1.0",
+    "nyc": "^12.0.2",
+    "pm2": "^2.10.4",
+    "prettier": "^1.13.5",
+    "tsc-watch": "^1.0.22",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typescript": "^2.9.1"
+  }
+}
