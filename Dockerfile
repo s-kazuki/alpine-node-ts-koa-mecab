@@ -12,7 +12,7 @@ MECAB_RUN_DEPS=openssl
 
 WORKDIR ${APP_ROOT}
 
-COPY package.json tsconfig.json tslint.js ${APP_ROOT}/
+COPY package.json ${APP_ROOT}/
 
 # Installing mecab
 RUN apk add --update --no-cache build-base \
