@@ -1,4 +1,4 @@
-FROM node:8.11-alpine
+FROM node:10.15-alpine
 
 LABEL maintainer="S-Kazuki<contact@revoneo.com>"
 
@@ -44,7 +44,7 @@ RUN apk add --update --no-cache build-base \
 \
 # Installing node modules
 && cd ${APP_ROOT} \
-&& npm install \
+&& npm ci \
 && npm cache clean --force \
 \
 && apk update \
